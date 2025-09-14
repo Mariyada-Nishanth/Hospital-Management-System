@@ -236,16 +236,16 @@ npm run db:seed      # Seed with sample data
 ## 📸 Screenshots
 
 ### Patient Dashboard
-![Patient Dashboard](screenshots/patient-dashboard.png)
+![Patient Dashboard](asset/patientdash.png)
 
 ### Doctor Interface
-![Doctor Dashboard](screenshots/doctor-dashboard.png)
+![Doctor Dashboard](asset/doctordash.png)
 
-### AI Chatbot
-![AI Chatbot](screenshots/ai-chatbot.png)
+### Lab Technician Dashboard 
+![AI Chatbot](asset/labdash.png)
 
 ### Billing System
-![Billing System](screenshots/billing-system.png)
+![Billing System](asset/billerdash.png)
 
 ## 🤝 Contributing
 
