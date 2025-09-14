@@ -725,9 +725,9 @@ export default function PatientDashboard() {
                         </div>
                           <div className="flex items-center">
                             <Clock className="h-4 w-4 mr-2 text-green-500" />
-                            {appointment.appointment_time}
-                          </div>
+                          {appointment.appointment_time}
                         </div>
+                      </div>
                       </div>
                       <span className={`px-3 py-1 text-xs font-semibold rounded-full ${
                         appointment.status === 'scheduled'

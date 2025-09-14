@@ -1,13 +1,16 @@
 {
-  "name": "vite-react-typescript-starter",
+  "name": "hospital-management-system",
+  "description": "A comprehensive hospital management platform with AI-powered chatbot, role-based access control, and complete patient workflow management",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:netlify": "vite build",
+    "postbuild": "echo 'Build completed successfully!'"
   },
   "dependencies": {
     "@supabase/auth-helpers-react": "^0.5.0",

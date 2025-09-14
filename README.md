@@ -224,28 +224,53 @@ npm run build        # Build for production
 npm run preview      # Preview production build
 npm run lint         # Run ESLint
 
+# Deployment
+npm run build:netlify # Build optimized for Netlify
+./verify-build.sh     # Verify build (Linux/Mac)
+verify-build.bat      # Verify build (Windows)
+
 # Database
 npm run db:reset     # Reset database
 npm run db:seed      # Seed with sample data
 ```
 
+## 🚀 Deployment
+
+This project is **production-ready** and configured for easy deployment on Netlify:
+
+### Quick Deploy
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Mariyada-Nishanth/Hospital-Management-System)
+
+### Manual Deployment
+1. **Fork/Clone** this repository
+2. **Connect** to Netlify from GitHub
+3. **Set Environment Variables** in Netlify dashboard:
+   - `VITE_SUPABASE_URL`
+   - `VITE_SUPABASE_ANON_KEY` 
+   - `VITE_GEMINI_API_KEY`
+4. **Deploy!** 🎉
+
+📖 **Detailed instructions**: See [DEPLOYMENT.md](DEPLOYMENT.md) for complete deployment guide.
+
 ## 🌐 Live Demo
 
-[View Live Demo](https://your-demo-url.com) - *Coming Soon*
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Mariyada-Nishanth/Hospital-Management-System)
+
+**Ready for deployment!** This project is configured for easy deployment on Netlify. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
 
 ## 📸 Screenshots
 
 ### Patient Dashboard
-![Patient Dashboard](screenshots/patient-dashboard.png)
+![Patient Dashboard](assets/patientdash.png)
 
 ### Doctor Interface
-![Doctor Dashboard](screenshots/doctor-dashboard.png)
+![Doctor Dashboard](assets/doctordash.png)
 
-### AI Chatbot
-![AI Chatbot](screenshots/ai-chatbot.png)
+### Lab Technician Dashboard 
+![AI Chatbot](assets/labdash.png)
 
 ### Billing System
-![Billing System](screenshots/billing-system.png)
+![Billing System](assets/billerdash.png)
 
 ## 🤝 Contributing
 
