@@ -267,7 +267,7 @@ This project is **production-ready** and configured for easy deployment on Netli
 ![Doctor Dashboard](assets/doctordash.png)
 
 ### Lab Technician Dashboard 
-![AI Chatbot](assets/labdash.png)
+![Lab Dashboard](assets/LabDash.png)
 
 ### Billing System
 ![Billing System](assets/billerdash.png)
