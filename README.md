@@ -254,7 +254,7 @@ This project is **production-ready** and configured for easy deployment on Netli
 
 ## 🌐 Live Demo
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/Mariyada-Nishanth/Hospital-Management-System)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](404founds.netlify.app)
 
 **Ready for deployment!** This project is configured for easy deployment on Netlify. See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed deployment instructions.
 
