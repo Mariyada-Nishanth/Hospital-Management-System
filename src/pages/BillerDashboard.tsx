@@ -173,9 +173,14 @@ export default function BillerDashboard() {
     };
   }, [user?.id, profile?.id, profile?.role]);
 
-  const handleSignOut = () => {
-    signOut();
-    navigate('/staff/login');
+  const handleSignOut = async () => {
+    try {
+      const { error } = await signOut();
+      if (error) throw error;
+      navigate('/staff/login');
+    } catch (err: any) {
+      setError(err.message || 'An error occurred during logout');
+    }
   };
 
   const handlePaymentTracking = () => {

@@ -144,6 +144,16 @@ const LabDashboard = () => {
     }
   };
 
+  const handleLogout = async () => {
+    try {
+      const { error } = await signOut();
+      if (error) throw error;
+      navigate('/staff/login');
+    } catch (err: any) {
+      setError(err.message || 'An error occurred during logout');
+    }
+  };
+
   // Function to detect test type based on test name
   const detectTestType = (testName: string): 'blood' | 'urine' | 'imaging' | 'other' => {
     const name = testName.toLowerCase();
@@ -457,7 +467,7 @@ const LabDashboard = () => {
                 </div>
               </div>
               <button
-                onClick={() => signOut()}
+                onClick={handleLogout}
                 className="flex items-center space-x-2 px-4 py-2 text-gray-600 hover:text-gray-900 hover:bg-gray-100 rounded-lg transition-colors"
               >
                 <LogOut className="h-4 w-4" />
