@@ -1,0 +1,90 @@
+-- Create lab technician profile with the provided UUID
+INSERT INTO profiles (id, email, first_name, last_name, role) VALUES 
+('0780e005-6569-4dbf-ba80-3bcb2bb9b81a', 'lab@hospital.com', 'Lab', 'Technician', 'lab_technician');
+
+-- Create some sample test reports for demonstration
+-- (Replace the UUIDs below with actual values from your database)
+
+-- First, let's check what approved bills we have to work with
+-- You can run this query to see available approved bills:
+-- SELECT br.id, br.patient_id, br.doctor_id, br.notes, br.amount, 
+--        p.first_name, p.last_name, d.first_name as doc_first, d.last_name as doc_last
+-- FROM bill_requests br
+-- JOIN patients p ON br.patient_id = p.id
+-- JOIN doctors d ON br.doctor_id = d.id
+-- WHERE br.status = 'approved';
+
+-- Example: Create test report for an approved bill
+-- (Replace the UUIDs with actual values from your approved bills)
+-- INSERT INTO test_reports (
+--   bill_request_id,
+--   patient_id,
+--   doctor_id,
+--   lab_technician_id,
+--   test_name,
+--   test_type,
+--   status,
+--   notes,
+--   results
+-- ) VALUES (
+--   'your-approved-bill-request-id-here',
+--   'your-patient-id-here',
+--   'your-doctor-id-here',
+--   '0780e005-6569-4dbf-ba80-3bcb2bb9b81a',
+--   'Complete Blood Count',
+--   'blood',
+--   'pending',
+--   'Routine blood test requested by doctor',
+--   NULL
+-- );
+
+-- Example: Create another test report with completed status
+-- INSERT INTO test_reports (
+--   bill_request_id,
+--   patient_id,
+--   doctor_id,
+--   lab_technician_id,
+--   test_name,
+--   test_type,
+--   status,
+--   notes,
+--   results,
+--   completed_at
+-- ) VALUES (
+--   'another-approved-bill-request-id-here',
+--   'another-patient-id-here',
+--   'another-doctor-id-here',
+--   '0780e005-6569-4dbf-ba80-3bcb2bb9b81a',
+--   'Urine Analysis',
+--   'urine',
+--   'completed',
+--   'Urine test completed with normal results',
+--   '{"color": "pale yellow", "clarity": "clear", "protein": "negative", "glucose": "negative", "ph": "6.5"}',
+--   NOW()
+-- );
+
+-- Example: Create a blood test report with detailed results
+-- INSERT INTO test_reports (
+--   bill_request_id,
+--   patient_id,
+--   doctor_id,
+--   lab_technician_id,
+--   test_name,
+--   test_type,
+--   status,
+--   notes,
+--   results,
+--   completed_at
+-- ) VALUES (
+--   'third-approved-bill-request-id-here',
+--   'third-patient-id-here',
+--   'third-doctor-id-here',
+--   '0780e005-6569-4dbf-ba80-3bcb2bb9b81a',
+--   'Blood Sugar Test',
+--   'blood',
+--   'completed',
+--   'Fasting blood glucose test',
+--   '{"glucose": "95", "normal_range": "70-100", "units": "mg/dL", "result": "normal"}',
+--   NOW()
+-- );
+
